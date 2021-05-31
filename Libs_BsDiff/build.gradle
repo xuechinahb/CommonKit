@@ -22,9 +22,9 @@ android {
         }
 
         ndk {
-//            moduleName "rnupdate"
-//            abiFilters "armeabi", 'armeabi-v7a', 'x86'
-            abiFilters "armeabi-v7a", "x86"
+           moduleName "rnupdate"
+           abiFilters "armeabi", 'armeabi-v7a', 'x86'
+            // abiFilters "armeabi-v7a", "x86"
         }
 
     }

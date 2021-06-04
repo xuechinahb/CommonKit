@@ -15,11 +15,11 @@ android {
         versionCode 1
         versionName config.framework_bsdiff_version
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        externalNativeBuild {
-            cmake {
-                cppFlags ""
-            }
-        }
+        // externalNativeBuild {
+        //     cmake {
+        //         cppFlags ""
+        //     }
+        // }
 
         ndk {
            // moduleName "rnupdate"
@@ -30,10 +30,16 @@ android {
     }
 
     externalNativeBuild {
-        cmake {
-            path "CMakeLists.txt"
+        ndkBuild {
+            path file('src/main/jni/Android.mk')
         }
     }
+
+    // externalNativeBuild {
+    //     cmake {
+    //         path "CMakeLists.txt"
+    //     }
+    // }
 }
 
 dependencies {
